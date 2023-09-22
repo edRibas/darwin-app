@@ -1,34 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Darwin - A MERN Stack Threads Application
+
+Darwin is a full-stack web application inspired by the Threads application, designed to provide a platform for users to create and engage in discussions through posts or threads. It is built using the MERN (MongoDB, Express.js, React, Node.js) stack.
+
+## Table of Contents
+
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Webhooks Integration](#webhooks-integration)
+- [Contributing](#contributing)
+
+## Features
+
+- User registration and authentication.
+- Creating, viewing, and commenting on threads.
+- Community creation and management.
+- User profile and community pages.
+- Real-time updates using webhooks.
+- ...
+
+## Screenshots
+
+Here are some screenshots from the Darwin application:
+
+- **Home Page:**
+
+  ![Home Page](screenshots/home-page.png)
+
+- **Thread View:**
+
+  ![Thread View](screenshots/thread-view.png)
+
+- **Community Page:**
+
+  ![Community Page](screenshots/community-page.png)
+
+- **User Profile:**
+
+  ![User Profile](screenshots/user-profile.png)
+
+- **Webhooks Configuration:**
+
+  ![Webhooks Configuration](screenshots/webhooks-configuration.png)
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to get Darwin up and running on your local development environment.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure you have the following software installed:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Node.js (v14 or higher)
+- MongoDB
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Installation
 
-## Learn More
+1. Clone the repository:
 
-To learn more about Next.js, take a look at the following resources:
+   ```shell
+   git clone https://github.com/edRibas/darwin.git
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Access the application in your browser at http://localhost:3000.
 
-## Deploy on Vercel
+## Usage
+    Register or log in to your Darwin account.
+    Create or join communities.
+    Create and participate in discussions by creating threads and comments.
+    Explore user profiles and community pages.
+    Webhooks Integration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Webhooks
+Darwin supports webhook integration for real-time updates. To set up webhooks, follow these steps:
+    Obtain a webhook secret from your webhook service provider (e.g., Clerk).
+    Set the NEXT_CLERK_WEBHOOK_SECRET environment variable in the server .env file with your webhook secret.
+    Configure your webhook service to send events to the appropriate endpoint in your Darwin application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributing
+To contribute:
+    Fork the repository.
+    Create a new branch for your feature or bug fix.
+    Make your changes and commit them with descriptive messages.
+    Push your changes to your fork.
+    Submit a pull request to the main repository's main branch.
